@@ -26,6 +26,72 @@ a,
   transition: all 300ms ease;
 }
 
+/* hire me btn */
+.hire-me-btn {
+  /* Button color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer on hover */
+  position: relative; /* Required for absolute positioning of glow */
+  outline: none; /* Remove outline */
+  transition: transform 0.2s; /* Smooth transformation */
+}
+
+/* Glowing effect */
+.hire-me-btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background: linear-gradient(to left, #141e30 0%, #243b55 51%, #141e30 100%);
+  border-radius: 8px;
+  border: 1px solid #000;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.hire-me-btn:hover {
+  color: #fff;
+  background: #000;
+  box-shadow: 0 0 25px #ff005e, 0 0 50px #ff005e, 0 0 100px #ff005e;
+  transition-delay: 0s;
+}
+
+.hire-me-btn:before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform-origin: bottom right;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Hire btn end/*
 /* DESKTOP NAV */
 
 nav,
@@ -378,6 +444,84 @@ article .icon {
 .project-btn {
   color: black;
   border-color: rgb(163, 163, 163);
+}
+
+/* Hire Me */
+#hire {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#hire .section__text__p1 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#hire .title {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Flexbox container for both sections */
+#hire .info-upper-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin: 2rem auto;
+}
+
+#hire .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+#hire .info-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+#hire .info-container img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Upwork section within #hire */
+#hire .upwork {
+  background-color: #f3fafa;
+  border: 2px solid #6cc644;
+}
+
+#hire .upwork:hover {
+  background-color: #6cc644;
+  color: white;
+}
+
+/* Fiverr section within #hire */
+#hire .fiverr {
+  background-color: #f7f2f8;
+  border: 2px solid #1dbf73;
+}
+
+#hire .fiverr:hover {
+  background-color: #1dbf73;
+  color: white;
 }
 
 /* CONTACT */
